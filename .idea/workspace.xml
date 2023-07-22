@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fd5eabc4-8dfa-4f44-8cfb-ca2a0e2e4cb2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/MVC_1/6. 스프링 MVC - 기본 기능.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/MVC_1/6. 스프링 MVC - 기본 기능.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC_1/7. 스프링 MVC  - 웹 페이지 만들기.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/MVC_1/7. 스프링 MVC  - 웹 페이지 만들기.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/hello/core/AppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/hello/core/AutoAppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/hello/core/CoreApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/hello/core/Hellolombok.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/hello/core/MemberApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/hello/core/OrderApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/hello/core/annotation/MainDiscountPolicy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/hello/core/common/MyLogger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/hello/core/discount/DiscountPolicy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/hello/core/discount/FixDiscountPolicy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/hello/core/discount/RateDiscountPolicy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/hello/core/member/Grade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/hello/core/member/Member.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/hello/core/member/MemberRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/hello/core/member/MemberService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/hello/core/member/MemberServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/hello/core/member/MemoryMemberRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/hello/core/order/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/hello/core/order/OrderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/hello/core/order/OrderServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/hello/core/web/LogDemoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/hello/core/web/logDemoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/resources/appConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/CoreApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/autowired/AllBeanTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/autowired/AutowiredTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/autowired/scan/AutoAppConfigTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/autowired/scan/filter/BeanA.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/autowired/scan/filter/BeanB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/autowired/scan/filter/ComponentFilterAppConfigTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/autowired/scan/filter/MyExcludeComponent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/autowired/scan/filter/MyIncludeComponent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/beandefinition/BeanDefinitionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/beanfind/ApplicationContextBasicFindTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/beanfind/ApplicationContextExtendsFindTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/beanfind/ApplicationContextInfoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/beanfind/ApplicationContextSameBeanFindTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/discount/RateDiscountPolicyTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/lifecycle/BeanLifeCycleTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/lifecycle/NetworkClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/member/MemberServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/order/OrderServiceImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/order/OrderServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/scope/PrototypeTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/scope/SingletonTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/scope/SingletonWithPrototypeTest1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/singleton/ConfigurationSingletonTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/singleton/SingletonService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/singleton/SingletonTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/singleton/StatefulService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/singleton/StatefulServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/hello/core/xml/XmlAppConText.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/ServletApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/ServletInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/basic/HelloData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/basic/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/basic/request/RequestBodyJsonServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/basic/request/RequestBodyStringServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/basic/request/RequestHeaderServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/basic/request/RequestParamServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/basic/response/ResponseHeaderServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/basic/response/ResponseHtmlServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/basic/response/ResponseJsonServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/domain/member/Member.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/domain/member/MemberRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/frontcontroller/ModelView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/frontcontroller/MyView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/frontcontroller/v1/ControllerV1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/frontcontroller/v1/FrontControllerServletV1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/frontcontroller/v1/controller/MemberFormControllerV1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/frontcontroller/v1/controller/MemberListControllerV1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/frontcontroller/v1/controller/MemberSaveControllerV1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/frontcontroller/v2/ControllerV2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/frontcontroller/v2/FrontControllerServletV2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/frontcontroller/v2/controller/MemberFormControllerV2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/frontcontroller/v2/controller/MemberListControllerV2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/frontcontroller/v2/controller/MemberSaveControllerV2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/frontcontroller/v3/ControllerV3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/frontcontroller/v3/FrontControllerServletV3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/frontcontroller/v3/controller/MemberFormControllerV3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/frontcontroller/v3/controller/MemberListControllerV3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/frontcontroller/v3/controller/MemberSaveControllerV3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/frontcontroller/v4/ControllerV4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/frontcontroller/v4/FrontControllerServletV4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/frontcontroller/v4/controller/MemberFormControllerV4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/frontcontroller/v4/controller/MemberListControllerV4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/frontcontroller/v4/controller/MemberSaveControllerV4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/frontcontroller/v5/FrontControllerServletV5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/frontcontroller/v5/MyHandlerAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/frontcontroller/v5/adapter/ControllerV3HandlerAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/frontcontroller/v5/adapter/ControllerV4HandlerAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/servlet/MemberFormServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/servlet/MemberListServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/servlet/MemberSaveServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/servletmvc/MvcMemberFormServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/servletmvc/MvcMemberListServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/servletmvc/MvcMemberSaveServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/springmvc/old/MyHttpRequestHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/springmvc/old/OldController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/springmvc/v1/SpringMemberFormControllerV1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/springmvc/v1/SpringMemberListControllerV1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/springmvc/v1/SpringMemberSaveControllerV1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/springmvc/v2/SpringMemberControllerV2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/java/hello/servlet/web/springmvc/v3/SpringMemberControllerV3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/webapp/WEB-INF/views/members.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/webapp/WEB-INF/views/new-form.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/webapp/WEB-INF/views/save-result.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/webapp/basic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/webapp/basic/hello-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/webapp/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/webapp/jsp/members.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/webapp/jsp/members/new-form.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/main/webapp/jsp/members/save.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/test/java/hello/servlet/ServletApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet/src/test/java/hello/servlet/domain/member/MemberRepositoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springmvc/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springmvc/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springmvc/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springmvc/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springmvc/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springmvc/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springmvc/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springmvc/src/main/java/hello/springmvc/SpringmvcApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springmvc/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springmvc/src/main/resources/static/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springmvc/src/test/java/hello/springmvc/SpringmvcApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2SEAQAeS9QRNuk97HYF1Ix5kyY9" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/oduho/Desktop/spring"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fd5eabc4-8dfa-4f44-8cfb-ca2a0e2e4cb2" name="Changes" comment="" />
+      <created>1688701347578</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688701347578</updated>
+    </task>
+    <servers />
+  </component>
+</project>
