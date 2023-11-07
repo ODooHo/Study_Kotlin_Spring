@@ -1,0 +1,1 @@
+[90m/Users/oduho/Desktop/spring/sampleKotlin/src/main/kotlin/studio/aroundhub/kotlin/function/[0mfunctionSample.kt[90m:[0m1[90m:1:[0m File name 'functionSample.kt' should conform PascalCase [90m(filename)[0m

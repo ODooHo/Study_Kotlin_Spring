@@ -1,26 +1,27 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.7.10"
-    id("org.jlleitschuh.gradle.ktlint") version "11.3.2"
-    application
+	kotlin("jvm") version "1.7.10"
+	id("org.jlleitschuh.gradle.ktlint") version "11.3.2"
+	application
 }
 
 group = "org.example"
 version = "1.0-SNAPSHOT"
 
 repositories {
-    mavenCentral()
+	mavenCentral()
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
+	testImplementation(kotlin("test"))
 }
 
 tasks.test {
-    useJUnitPlatform()
+	useJUnitPlatform()
 }
 
 tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "17"
+	kotlinOptions.jvmTarget = "17"
 }
+
