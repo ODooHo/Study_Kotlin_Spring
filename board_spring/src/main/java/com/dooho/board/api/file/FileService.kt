@@ -16,7 +16,6 @@ import org.springframework.beans.factory.annotation.Value
 import org.springframework.core.io.InputStreamResource
 import org.springframework.core.io.Resource
 import org.springframework.http.HttpHeaders
-import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
 import org.springframework.stereotype.Service
@@ -111,76 +110,97 @@ class FileService(
         }
     }
 
-    @Throws(IOException::class)
-    fun getProfileImage(imageName: String): ResponseEntity<ByteArray> {
+    fun getProfileImage(imageName: String): String? {
         return try {
             val extension = getExtension("", imageName)
             val fileName = "$imageName$extension"
+
             val s3Object = amazonS3.getObject(bucketName, "${uploadDir}img/$fileName")
-            val objectInputStream = s3Object.objectContent
-            val imageData = IOUtils.toByteArray(objectInputStream)
-            val headers = HttpHeaders()
-            var mediaType = MediaType.IMAGE_JPEG
-            if (extension.equals(".jpg", ignoreCase = true) || extension.equals(".jpeg", ignoreCase = true)) {
-                mediaType = MediaType.IMAGE_JPEG
-            } else if (extension.equals(".png", ignoreCase = true)) {
-                mediaType = MediaType.IMAGE_PNG
+
+            val imageUrl = amazonS3.getUrl(bucketName, "${uploadDir}img/$fileName").toString()
+
+            // Using 'use' to safely handle the stream and automatically close it
+            s3Object.objectContent.use { content->
+                // Process the content if needed
+                // For example, read the content or manipulate it
+                IOUtils.toByteArray(content)
             }
-            headers.contentType = mediaType
-            ResponseEntity.ok()
-                .headers(headers)
-                .body(imageData)
+            imageUrl
         } catch (e: AmazonS3Exception) {
-            ResponseEntity.notFound().build()
+            null
         } catch (e: Exception) {
             e.printStackTrace()
-            ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build()
+            null
         }
     }
+//    @Throws(IOException::class)
+//    fun getProfileImage(imageName: String): ResponseEntity<ByteArray> {
+//        return try {
+//            val extension = getExtension("", imageName)
+//            val fileName = "$imageName$extension"
+//            val s3Object = amazonS3.getObject(bucketName, "${uploadDir}img/$fileName")
+//            val temp = amazonS3.getUrl(bucketName,"${uploadDir}img/$fileName")
+//            println("temp = ${temp} ${temp::class}")
+//            val objectInputStream = s3Object.objectContent
+//            val imageData = IOUtils.toByteArray(objectInputStream)
+//            val headers = HttpHeaders()
+//            var mediaType = MediaType.IMAGE_JPEG
+//            if (extension.equals(".jpg", ignoreCase = true) || extension.equals(".jpeg", ignoreCase = true)) {
+//                mediaType = MediaType.IMAGE_JPEG
+//            } else if (extension.equals(".png", ignoreCase = true)) {
+//                mediaType = MediaType.IMAGE_PNG
+//            }
+//            headers.contentType = mediaType
+//            ResponseEntity.ok()
+//                .headers(headers)
+//                .body(imageData)
+//        } catch (e: AmazonS3Exception) {
+//            ResponseEntity.notFound().build()
+//        } catch (e: Exception) {
+//            e.printStackTrace()
+//            ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build()
+//        }
+//    }
 
-    @Throws(IOException::class)
-    fun getImage(imageName: String): ResponseEntity<ByteArray?> {
-        if (imageName == "null") {
-            return ResponseEntity.ok().body(null)
-        }
-        val extension = getExtension("", imageName)
-        val fileName = "$imageName$extension"
+    fun getImage(imageName: String): String? {
         return try {
+            val extension = getExtension("", imageName)
+            val fileName = "$imageName$extension"
+
             val s3Object = amazonS3.getObject(bucketName, "${uploadDir}img/$fileName")
-            val objectInputStream = s3Object.objectContent
-            val imageData = objectInputStream.readAllBytes()
-            val headers = HttpHeaders()
-            var mediaType = MediaType.IMAGE_JPEG
-            if (extension.equals(".jpg", ignoreCase = true) || extension.equals(".jpeg", ignoreCase = true)) {
-                mediaType = MediaType.IMAGE_JPEG
-            } else if (extension.equals(".png", ignoreCase = true)) {
-                mediaType = MediaType.IMAGE_PNG
+
+            val imageUrl = amazonS3.getUrl(bucketName, "${uploadDir}img/$fileName").toString()
+
+            // Using 'use' to safely handle the stream and automatically close it
+            s3Object.objectContent.use { content->
+                // Process the content if needed
+                // For example, read the content or manipulate it
+                IOUtils.toByteArray(content)
             }
-            headers.contentType = mediaType
-            ResponseEntity.ok()
-                .headers(headers)
-                .body(imageData)
+            imageUrl
+        } catch (e: AmazonS3Exception) {
+            null
         } catch (e: Exception) {
             e.printStackTrace()
-            ResponseEntity.ok().body(null)
+            null
         }
     }
 
-    @Throws(IOException::class)
-    fun getVideo(videoName: String): ResponseEntity<Resource?> {
+    fun getVideo(videoName: String): String?{
         return if (videoName == "null") {
-            ResponseEntity.ok().body(null)
+            null
         } else try {
             val s3Object = amazonS3.getObject(bucketName, "${uploadDir}video/$videoName")
-            val objectInputStream = s3Object.objectContent
-            val headers = HttpHeaders()
-            headers.contentType = MediaType.valueOf("video/mp4")
-            ResponseEntity.ok()
-                .headers(headers)
-                .body(InputStreamResource(objectInputStream))
+            val videoUrl = amazonS3.getUrl(bucketName,"${uploadDir}video/$videoName").toString()
+            s3Object.objectContent.use { content->
+                // Process the content if needed
+                // For example, read the content or manipulate it
+                IOUtils.toByteArray(content)
+            }
+            videoUrl
         } catch (e: Exception) {
             e.printStackTrace()
-            ResponseEntity.notFound().build()
+            null
         }
     }
 
@@ -205,7 +225,7 @@ class FileService(
     }
 
     @Throws(IOException::class)
-    private fun getExtension(fileDirectory: String, fileId: String): String {
+    private fun getExtension(fileDirectory: String, fileId: String): String{
         val folder = File(fileDirectory)
         val filter = FilenameFilter { dir: File?, name: String ->
             try {

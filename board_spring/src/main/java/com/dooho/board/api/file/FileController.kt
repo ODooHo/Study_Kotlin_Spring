@@ -1,7 +1,6 @@
 package com.dooho.board.api.file
 
 import com.dooho.board.api.ResponseDto
-import com.dooho.board.api.file.FileService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.core.io.Resource
 import org.springframework.http.ResponseEntity
@@ -24,20 +23,20 @@ class FileController @Autowired constructor(private val fileService: FileService
 
     @GetMapping("/images/{imageName}/profile")
     @Throws(IOException::class)
-    fun getProfileImage(@PathVariable imageName: String?): ResponseEntity<ByteArray> {
-        return fileService.getProfileImage(imageName!!)
+    fun getProfileImage(@PathVariable imageName: String): String? {
+        return fileService.getProfileImage(imageName)
     }
 
     @GetMapping("/images/{imageName}")
     @Throws(IOException::class)
-    fun getImage(@PathVariable imageName: String?): ResponseEntity<ByteArray?> {
-        return fileService.getImage(imageName!!)
+    fun getImage(@PathVariable imageName: String): String? {
+        return fileService.getImage(imageName)
     }
 
     @GetMapping("/videos/{videoName}")
     @Throws(IOException::class)
-    fun getVideo(@PathVariable videoName: String?): ResponseEntity<Resource?> {
-        return fileService.getVideo(videoName!!)
+    fun getVideo(@PathVariable videoName: String): String? {
+        return fileService.getVideo(videoName)
     }
 
     @GetMapping("/files/{fileName}")
