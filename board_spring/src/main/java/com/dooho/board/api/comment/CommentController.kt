@@ -22,7 +22,6 @@ class CommentController @Autowired constructor(private val commentService: Comme
         return commentService.deleteComment(boardNumber, commentId)
     }
 
-    @CrossOrigin(origins = ["*"])
     @PatchMapping("{boardNumber}/comment/{commentId}/edit")
     fun editComment(
         @PathVariable boardNumber: Int?,

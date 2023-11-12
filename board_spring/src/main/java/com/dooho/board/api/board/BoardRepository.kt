@@ -16,5 +16,4 @@ interface BoardRepository : JpaRepository<BoardEntity?, Int?> {
     fun existsByBoardTitle(boardTitle: String?): Boolean
     fun findByBoardNumber(boardNumber: Int?): BoardEntity?
     fun deleteBoardEntityByBoardNumber(BoardNumber: Int?)
-    fun findByBoardTitle(boardTitle: String?): BoardEntity?
 }
