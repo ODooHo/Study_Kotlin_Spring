@@ -4,7 +4,7 @@ import com.dooho.board.dto.board.LikyDto;
 import com.dooho.board.dto.ResponseDto;
 import com.dooho.board.entity.BoardEntity;
 import com.dooho.board.entity.LikyEntity;
-import com.dooho.board.repository.BoardRepository;
+import com.dooho.board.repository.BoardRepositoryImpl;
 import com.dooho.board.repository.LikyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,10 +16,10 @@ import java.util.List;
 public class LikyService {
 
     private final LikyRepository likyRepository;
-    private final BoardRepository boardRepository;
+    private final BoardRepositoryImpl boardRepository;
 
     @Autowired
-    public LikyService(LikyRepository likyRepository, BoardRepository boardRepository) {
+    public LikyService(LikyRepository likyRepository, BoardRepositoryImpl boardRepository) {
         this.likyRepository = likyRepository;
         this.boardRepository = boardRepository;
     }

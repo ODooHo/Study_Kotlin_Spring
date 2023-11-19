@@ -7,7 +7,7 @@ import com.dooho.board.dto.ResponseDto;
 import com.dooho.board.entity.BoardEntity;
 import com.dooho.board.entity.CommentEntity;
 import com.dooho.board.entity.UserEntity;
-import com.dooho.board.repository.BoardRepository;
+import com.dooho.board.repository.BoardRepositoryImpl;
 import com.dooho.board.repository.CommentRepository;
 import com.dooho.board.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -15,7 +15,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.core.io.Resource;
-import org.springframework.core.io.UrlResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -27,17 +26,13 @@ import java.io.File;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
 @Slf4j
 public class FileService {
     private final UserRepository userRepository;
-    private final BoardRepository boardRepository;
+    private final BoardRepositoryImpl boardRepository;
     private final CommentRepository commentRepository;
 
     private final AmazonS3 amazonS3;
@@ -58,7 +53,7 @@ public class FileService {
 
 
     @Autowired
-    public FileService(UserRepository userRepository, BoardRepository boardRepository, CommentRepository commentRepository, AmazonS3 amazonS3) {
+    public FileService(UserRepository userRepository, BoardRepositoryImpl boardRepository, CommentRepository commentRepository, AmazonS3 amazonS3) {
         this.userRepository = userRepository;
         this.boardRepository = boardRepository;
         this.commentRepository = commentRepository;
