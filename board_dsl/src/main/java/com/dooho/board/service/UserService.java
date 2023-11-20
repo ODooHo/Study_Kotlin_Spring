@@ -7,7 +7,7 @@ import com.dooho.board.dto.ResponseDto;
 import com.dooho.board.entity.BoardEntity;
 import com.dooho.board.entity.CommentEntity;
 import com.dooho.board.entity.UserEntity;
-import com.dooho.board.repository.BoardRepositoryImpl;
+import com.dooho.board.repository.BoardRepository;
 import com.dooho.board.repository.CommentRepository;
 import com.dooho.board.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,11 +20,11 @@ import java.util.List;
 public class UserService {
 
     private final UserRepository userRepository;
-    private final BoardRepositoryImpl boardRepository;
+    private final BoardRepository boardRepository;
     private final CommentRepository commentRepository;
 
     @Autowired
-    public UserService(UserRepository userRepository, BoardRepositoryImpl boardRepository, CommentRepository commentRepository) {
+    public UserService(UserRepository userRepository, BoardRepository boardRepository, CommentRepository commentRepository) {
         this.userRepository = userRepository;
         this.boardRepository = boardRepository;
         this.commentRepository = commentRepository;

@@ -7,7 +7,7 @@ import com.dooho.board.dto.ResponseDto;
 import com.dooho.board.entity.BoardEntity;
 import com.dooho.board.entity.CommentEntity;
 import com.dooho.board.entity.UserEntity;
-import com.dooho.board.repository.BoardRepositoryImpl;
+import com.dooho.board.repository.BoardRepository;
 import com.dooho.board.repository.CommentRepository;
 import com.dooho.board.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -32,7 +32,7 @@ import java.util.List;
 @Slf4j
 public class FileService {
     private final UserRepository userRepository;
-    private final BoardRepositoryImpl boardRepository;
+    private final BoardRepository boardRepository;
     private final CommentRepository commentRepository;
 
     private final AmazonS3 amazonS3;
@@ -53,7 +53,7 @@ public class FileService {
 
 
     @Autowired
-    public FileService(UserRepository userRepository, BoardRepositoryImpl boardRepository, CommentRepository commentRepository, AmazonS3 amazonS3) {
+    public FileService(UserRepository userRepository, BoardRepository boardRepository, CommentRepository commentRepository, AmazonS3 amazonS3) {
         this.userRepository = userRepository;
         this.boardRepository = boardRepository;
         this.commentRepository = commentRepository;
