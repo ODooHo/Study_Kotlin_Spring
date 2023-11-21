@@ -23,19 +23,19 @@ class FileController @Autowired constructor(private val fileService: FileService
 
     @GetMapping("/images/{imageName}/profile")
     @Throws(IOException::class)
-    fun getProfileImage(@PathVariable imageName: String): String? {
+    fun getProfileImage(@PathVariable imageName: String): ResponseDto<String?> {
         return fileService.getProfileImage(imageName)
     }
 
     @GetMapping("/images/{imageName}")
     @Throws(IOException::class)
-    fun getImage(@PathVariable imageName: String): String? {
+    fun getImage(@PathVariable imageName: String): ResponseDto<String?> {
         return fileService.getImage(imageName)
     }
 
     @GetMapping("/videos/{videoName}")
     @Throws(IOException::class)
-    fun getVideo(@PathVariable videoName: String): String? {
+    fun getVideo(@PathVariable videoName: String): ResponseDto<String?> {
         return fileService.getVideo(videoName)
     }
 

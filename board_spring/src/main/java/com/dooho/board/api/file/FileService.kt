@@ -110,7 +110,7 @@ class FileService(
         }
     }
 
-    fun getProfileImage(imageName: String): String? {
+    fun getProfileImage(imageName: String): ResponseDto<String?> {
         return try {
             val extension = getExtension("", imageName)
             val fileName = "$imageName$extension"
@@ -125,12 +125,12 @@ class FileService(
                 // For example, read the content or manipulate it
                 IOUtils.toByteArray(content)
             }
-            imageUrl
+            setSuccess("Success",imageUrl)
         } catch (e: AmazonS3Exception) {
-            null
+            setFailed("Cloud Error")
         } catch (e: Exception) {
             e.printStackTrace()
-            null
+            setFailed("DataBase Error")
         }
     }
 //    @Throws(IOException::class)
@@ -162,7 +162,7 @@ class FileService(
 //        }
 //    }
 
-    fun getImage(imageName: String): String? {
+    fun getImage(imageName: String): ResponseDto<String?> {
         return try {
             val extension = getExtension("", imageName)
             val fileName = "$imageName$extension"
@@ -177,18 +177,18 @@ class FileService(
                 // For example, read the content or manipulate it
                 IOUtils.toByteArray(content)
             }
-            imageUrl
+            setSuccess("Success",imageUrl);
         } catch (e: AmazonS3Exception) {
-            null
+            setFailed("Cloud Error")
         } catch (e: Exception) {
             e.printStackTrace()
-            null
+            setFailed("DataBase Error")
         }
     }
 
-    fun getVideo(videoName: String): String?{
+    fun getVideo(videoName: String): ResponseDto<String?>{
         return if (videoName == "null") {
-            null
+            setFailed("Video Doesn't Exist")
         } else try {
             val s3Object = amazonS3.getObject(bucketName, "${uploadDir}video/$videoName")
             val videoUrl = amazonS3.getUrl(bucketName,"${uploadDir}video/$videoName").toString()
@@ -197,10 +197,10 @@ class FileService(
                 // For example, read the content or manipulate it
                 IOUtils.toByteArray(content)
             }
-            videoUrl
+            setSuccess("Success",videoUrl)
         } catch (e: Exception) {
             e.printStackTrace()
-            null
+            setFailed("DataBase or S3 Error")
         }
     }
 
