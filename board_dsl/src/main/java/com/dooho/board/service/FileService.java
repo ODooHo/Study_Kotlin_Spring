@@ -136,34 +136,21 @@ public class FileService {
     }
 
 
-    public ResponseEntity<byte[]> getProfileImage(String imageName) throws IOException {
+    public ResponseDto<String> getProfileImage(String imageName) throws IOException {
         try {
             String extension = getExtension("", imageName); // 확장자 추출 로직 그대로 사용
             String fileName = imageName + extension;
 
-            S3Object s3Object = amazonS3.getObject(bucketName, uploadDir+"img/"+ fileName);
-            S3ObjectInputStream objectInputStream = s3Object.getObjectContent();
-            byte[] imageData = IOUtils.toByteArray(objectInputStream);
-
+            String imageUrl = amazonS3.getUrl(bucketName, uploadDir+"img/"+ fileName).toString();
             HttpHeaders headers = new HttpHeaders();
             MediaType mediaType = MediaType.IMAGE_JPEG;
 
-            if (extension.equalsIgnoreCase(".jpg") || extension.equalsIgnoreCase(".jpeg")) {
-                mediaType = MediaType.IMAGE_JPEG;
-            } else if (extension.equalsIgnoreCase(".png")) {
-                mediaType = MediaType.IMAGE_PNG;
-            }
-
-            headers.setContentType(mediaType);
-
-            return ResponseEntity.ok()
-                    .headers(headers)
-                    .body(imageData);
+            return ResponseDto.setSuccess("Success",imageUrl);
         } catch (AmazonS3Exception e) {
-            return ResponseEntity.notFound().build();
+            return ResponseDto.setFailed("Cloud Error!");
         } catch (Exception e) {
             e.printStackTrace();
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+            return ResponseDto.setFailed("DataBase Error");
         }
     }
 

@@ -29,8 +29,8 @@ public class FileController {
     }
 
     @GetMapping("/images/{imageName}/profile")
-    public ResponseEntity<byte[]> getProfileImage(@PathVariable String imageName)throws IOException{
-        ResponseEntity<byte[]> result = fileService.getProfileImage(imageName);
+    public ResponseDto<String> getProfileImage(@PathVariable String imageName)throws IOException{
+        ResponseDto<String> result = fileService.getProfileImage(imageName);
         return result;
     }
 

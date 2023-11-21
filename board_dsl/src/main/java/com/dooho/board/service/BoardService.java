@@ -85,7 +85,7 @@ public class BoardService {
         List<BoardEntity> boardList = new ArrayList<BoardEntity>();
         LocalDate date = LocalDate.now().minusDays(365);
         try{
-            boardList = boardRepository.findTop3ByBoardWriteDateAfterOrderByBoardLikeCountDesc(date);
+            boardList = boardRepository.findTop3(date);
 
         }catch (Exception e){
             e.printStackTrace();
@@ -99,7 +99,7 @@ public class BoardService {
         List<BoardEntity> boardList = new ArrayList<>();
 
         try{
-            boardList = boardRepository.findByOrderByBoardWriteDateDescBoardNumberDesc();
+            boardList = boardRepository.findList();
         }catch (Exception e){
             e.printStackTrace();
             return ResponseDto.setFailed("DataBase Error");

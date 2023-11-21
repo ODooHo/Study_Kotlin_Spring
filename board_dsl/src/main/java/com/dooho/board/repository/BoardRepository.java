@@ -11,12 +11,7 @@ import java.util.List;
 
 @Repository
 @Transactional
-public interface BoardRepository extends JpaRepository<BoardEntity, Integer> {
-
-    List<BoardEntity> findTop3ByBoardWriteDateAfterOrderByBoardLikeCountDesc(LocalDate boardWriteDate);
-
-    List<BoardEntity> findByOrderByBoardWriteDateDescBoardNumberDesc();
-
+public interface BoardRepository extends JpaRepository<BoardEntity, Integer>, CustomBoardRepository {
 
     List<BoardEntity> findByBoardTitleContains(String boardTitle);
 
