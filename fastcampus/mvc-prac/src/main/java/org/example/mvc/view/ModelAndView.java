@@ -6,10 +6,9 @@ import java.util.Map;
 
 public class ModelAndView {
     private Object view;
-    private Map<String, Object> model = new HashMap<>();
-
+    private Map<String,Object> model = new HashMap<>();
     public ModelAndView(String viewName) {
-        this.view = viewName;
+        view = viewName;
     }
 
     public Map<String, Object> getModel() {

@@ -5,11 +5,12 @@ import org.example.mvc.repository.UserRepository;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 
-public class UserCreateController implements Controller {
+public class UserCreateController implements Controller{
     @Override
     public String handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        UserRepository.save(new User(request.getParameter("userId"), request.getParameter("name")));
+        UserRepository.save(new User(request.getParameter("userId"),request.getParameter("name")));
         return "redirect:/users";
     }
 }
