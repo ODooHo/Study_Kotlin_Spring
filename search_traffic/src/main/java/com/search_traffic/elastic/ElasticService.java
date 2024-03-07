@@ -1,25 +1,28 @@
 package com.search_traffic.elastic;
 
-import com.search_traffic.rdb.BoardEntity;
+import com.search_traffic.rdb.PublicDataEntity;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
 public class ElasticService {
-    private final BoardSearchRepository boardSearchRepository;
+    private final PublicDataSearchRepository publicDataSearchRepository;
 
-    public void init(List<BoardEntity> boardEntityList){
-        List<BoardDocument> boardList = boardEntityList.stream()
-                .map(BoardDocument::from)
+    public void init(List<PublicDataEntity> boardEntityList){
+        List<PublicDataDocument> boardList = boardEntityList.stream()
+                .map(PublicDataDocument::from)
                 .toList();
-        boardSearchRepository.saveAll(boardList);
+        publicDataSearchRepository.saveAll(boardList);
+    }
+    public List<PublicDataDocument> searchByName(String name){
+        return publicDataSearchRepository.findByNameContaining(name);
     }
 
-    public List<BoardDocument> searchByTitle(String title){
-        return boardSearchRepository.findByTitleContaining(title);
+    public List<PublicDataDocument> searchByCompany(String locate){
+        return publicDataSearchRepository.findByCompanyContaining(locate);
     }
+
 }
