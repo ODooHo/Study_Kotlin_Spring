@@ -81,8 +81,9 @@ public class BasicTxTest {
 
     @Test
     void inner_commit() {
-        log.info("외부 트랜잭션 시작");
+
         TransactionStatus outer = txManager.getTransaction(new DefaultTransactionAttribute());
+        
         log.info("outer.isNewTransaction()={}", outer.isNewTransaction());
 
         log.info("내부 트랜잭션 시작");
