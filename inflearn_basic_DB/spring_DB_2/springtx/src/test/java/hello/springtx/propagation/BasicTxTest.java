@@ -18,9 +18,15 @@ import javax.sql.DataSource;
 
 import static org.assertj.core.api.Assertions.*;
 
+
 @Slf4j
 @SpringBootTest
 public class BasicTxTest {
+
+    /**
+     * 외부, 내부 트랜잭션 간의 커밋 롤백 등을 비교하며
+     * 물리적 트랜잭션과 논리적 트랜잭션의 개념을 상기한다.
+     */
 
     @Autowired
     PlatformTransactionManager txManager;
