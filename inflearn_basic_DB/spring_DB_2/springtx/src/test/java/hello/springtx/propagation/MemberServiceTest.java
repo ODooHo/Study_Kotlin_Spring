@@ -25,6 +25,7 @@ class MemberServiceTest {
      * memberRepository @Transactional:ON
      * logRepository    @Transactional:ON
      */
+
     @Test
     void outerTxOff_success() {
         //given
