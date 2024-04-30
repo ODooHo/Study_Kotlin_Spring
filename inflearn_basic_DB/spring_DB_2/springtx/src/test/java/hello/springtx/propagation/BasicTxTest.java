@@ -89,7 +89,7 @@ public class BasicTxTest {
     void inner_commit() {
 
         TransactionStatus outer = txManager.getTransaction(new DefaultTransactionAttribute());
-        
+
         log.info("outer.isNewTransaction()={}", outer.isNewTransaction());
 
         log.info("내부 트랜잭션 시작");
@@ -150,9 +150,6 @@ public class BasicTxTest {
         log.info("외부 트랜잭션 커밋");
         txManager.commit(outer); //커밋
     }
-
-
-
 
 
 }
